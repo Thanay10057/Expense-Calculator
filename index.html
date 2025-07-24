@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal-Based Savings Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Goal-Based Savings Calculator</h1>
+        <form id="savings-form">
+            <div class="input-group">
+                <label for="goal-icon">Select Goal Icon:</label>
+                <select id="goal-icon">
+                    <option value="💰">💰 Money Bag</option>
+                    <option value="📱">📱 Phone</option>
+                    <option value="💻">💻 Laptop</option>
+                    <option value="🚗">🚗 Car</option>
+                    <option value="✈️">✈️ Vacation</option>
+                    <option value="🏠">🏠 House</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="goal-amount">Savings Goal Amount (₹):</label>
+                <input type="number" id="goal-amount" placeholder="e.g., 75000" required>
+            </div>
+            <div class="input-group">
+                <label for="timeframe">Timeframe (Months):</label>
+                <input type="number" id="timeframe" placeholder="e.g., 12" required>
+            </div>
+            <div class="input-group">
+                <label for="interest-rate">Expected Annual Interest Rate (%):</label>
+                <input type="number" id="interest-rate" placeholder="e.g., 5" value="0" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result" class="result-container"></div>
+        <div class="chart-container">
+            <canvas id="savings-chart"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
